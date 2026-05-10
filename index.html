@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tasks — To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="app-header">
+      <h1 class="app-title">My <span>Tasks</span></h1>
+      <p class="app-meta" id="date-label"></p>
+    </header>
+
+    <div class="add-row">
+      <input type="text" id="task-input" placeholder="Add a new task…" maxlength="200" aria-label="New task" />
+      <button class="btn-add" id="add-btn">+ Add</button>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter tasks">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="done">Done</button>
+    </div>
+
+    <ul class="task-list" id="task-list" aria-label="Task list">
+      <!-- Tasks are injected here by script.js -->
+    </ul>
+
+    <div class="bottom-bar">
+      <span id="count-label">0 tasks</span>
+      <button class="clear-btn" id="clear-done">Clear completed</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
